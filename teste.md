@@ -1,3 +1,5 @@
+### 1.4 Comparativo BD x Aplicação
+
 | Critério                  | Banco de Dados                                                                                                                | Aplicação                                                                                                            |
 | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | Consistência              | Permite aplicar as regras de integridade diretamente aos dados, mesmo quando existem diferentes aplicações acessando o banco. | Depende de cada aplicação implementar e seguir corretamente as mesmas regras.                                        |
@@ -6,3 +8,5 @@
 | Manutenção                | Facilita a manutenção de regras que precisam ser usadas por várias aplicações, pois ficam centralizadas no banco.             | Pode facilitar a organização e os testes da lógica, mas mudanças podem precisar ser feitas em diferentes aplicações. |
 | Portabilidade             | Pode exigir adaptações quando utiliza recursos específicos do SGBD.                                                           | Pode facilitar a mudança de banco quando a lógica não depende diretamente de recursos específicos dele.              |
 | Controle central da regra | Permite manter uma regra em um único lugar e aplicá-la às diferentes aplicações que acessam o banco.                          | O controle fica distribuído entre as aplicações, o que pode gerar diferenças na implementação da mesma regra.        |
+
+O banco de dados e a aplicação podem contribuir de formas diferentes para o cumprimento das regras de negócio. O banco é mais indicado quando é importante garantir a integridade dos dados e manter uma regra que deve ser seguida por diferentes aplicações. A aplicação, por outro lado, oferece mais flexibilidade para regras relacionadas ao funcionamento e aos processos do sistema. Assim, a escolha depende do tipo de regra e de como o sistema será utilizado.
